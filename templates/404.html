@@ -1,8 +1,33 @@
-<html>
-<head>
-	<title> Page not found! </title>
-</head>
-<body>
-	<p> Nos disculpamos por las molestias </p>
-</body>
-</html>
+{% extends 'base/base.html'%}
+{% block title %} {{ title }}  {% endblock %}
+
+{% block content %}
+	
+	{% from "_macro.html" import render_field %}
+    <div class="content-section">
+  <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <div style="text-align: center">
+           
+            <h3> La página que estás buscando no existe. </h3>
+            <hr class="intro-divider">
+            <a href="{{ url_for('index') }}" class="btn btn-primary">
+                <i class="fa fa-home"></i>
+                Home
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+	{% endblock %}

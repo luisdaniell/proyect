@@ -11,7 +11,10 @@
     
      {%- block styles %}
     <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-theme.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.ico') }}">
      {%- endblock styles %}
 </head>
@@ -39,7 +42,7 @@
       <ul class="nav navbar-nav navbar-right">
      
          <li><a href="{{ url_for('reviews') }}">Comentarios</a></li>
-
+        
         <li><a href="{{ url_for('comment') }}">add Comentario</a></li> 
         <li><a href="{{ url_for('users') }}">Usuario</a></li> 
         <li><a href="{{ url_for('create') }}">Registrarse</a></li>

@@ -10,7 +10,6 @@ class Config(object):
 MAIL_PASSWORD = os.environ.get('PASSWORD_EMAIL_CF')
 class DevelopmentConfig(Config):
 	DEBUG = True
-	#SQLALCHEMY_DATABASE_URI = 'mysql://root:uremix@localhost/flask'
-	SQLALCHEMY_DATABASE_URI = 'postgresql://luis:luis@localhost/flask8'
+	SQLALCHEMY_DATABASE_URI = 'postgresql://daniel:daniel@localhost/flask'
 	SQLALCHEMY_TRACK_MODIFICATIONS = False
       

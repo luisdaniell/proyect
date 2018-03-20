@@ -13,11 +13,11 @@
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                      <h1>LISTA DE USUARIOS</h1>  
                 <table class="table  table-bordered table-hover">
-               <thead>
+               <thead class="thead-inverse">
                     <tr>
                     
                        <th scope="col">Usuario</th>
-                       <th scope="col">Fecha</th>
+                       <th scope="col" >Fecha</th>
                        <th scope="col">Comentario</th>
                     </tr>
                      </thead>
@@ -25,7 +25,7 @@
                        {% for user in users %}
                         <tr>
                           
-                          <td>{{ user.username }}</td>
+                          <td >{{ user.username }}</td>
                           <td>{{ user.email }}</td>
                            <td>{{ date_format(user.created_date) }}</td>
                           
