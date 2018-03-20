@@ -21,7 +21,6 @@ from flask_login import LoginManager
 from flask_wtf import CsrfProtect
 import forms
 import json
-
 from helper import date_format
 
 from flask_mail import Mail
