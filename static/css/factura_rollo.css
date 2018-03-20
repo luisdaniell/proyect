@@ -1,0 +1,115 @@
+
+
+                /* PRINCIPAL.........................*/
+                body{
+                    width: 300px;
+                   
+                    -webkit-font-smoothing:antialiased;
+	            -moz-osx-font-smoothing:grayscale;
+	            font-family:'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+	            font-weight:400;
+	            overflow-x:hidden;
+	            overflow-y:auto
+                    line-height:1.42857143;
+	            color:#333;
+	            background-color:#fff
+                }
+                /* latin */
+                 @font-face {
+                   font-family: 'Source Sans Pro';
+                   font-style: normal;
+                   font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(http://fonts.gstatic.com/s/sourcesanspro/v11/ODelI1aHBYDBqgeIAH2zlNV_2ngZ8dMf8fLgjYEouxg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+                 @font-face {
+                 font-family: 'Source Sans Pro';
+                 font-style: normal;
+                 font-weight: 700;
+ src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(http://fonts.gstatic.com/s/sourcesanspro/v11/toadOcfmlt9b38dHJxOBGEo0As1BFRXtCDhS66znb_k.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;}
+
+                tfoot{
+                    padding-top: 5px;
+                }
+
+                .css-content_center{
+                    text-align: center;
+                }
+
+                .css-header_table{
+                    /*border: 1px solid #000;*/
+                    border-top: 1px solid;
+                    border-bottom: 1px solid;
+                }
+
+                .css-footer_table{
+                    /*border: 1px solid #000;*/
+                    border-top: 1px solid;
+                }
+
+                .css-info_table{
+                    width: 100%;
+                }
+
+                .css-info_table td{
+                    padding-right: 2px;
+                    padding-left: 2px;
+                }
+
+                /* PRINCIPAL.........................*/
+                
+
+                table {
+	        border-spacing:0;
+	        border-collapse:collapse
+                }
+                td,th {
+	        padding:0
+                }
+                hr {
+	        margin-top:5px;
+	        margin-bottom:5px;
+	        border:0;
+	        border-top:1px solid #eee
+                }
+
+                .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
+	        font-family:inherit;
+	        font-weight:500;
+	        line-height:1.1;
+	        color:inherit
+                }
+
+                .h1,.h2,.h3,h1,h2,h3 {
+	        margin-top:5px;
+	        margin-bottom:10px
+                }
+
+                .h1,h1 {
+	        font-size:36px
+                }
+                .h2,h2 {
+	        font-size:30px
+                 }
+                .h3,h3 {
+	        font-size:24px
+                 
+                 }
+
+                 p {
+	
+                 margin: 0;
+		 font-size:15px
+                 }
+                 
+
+                 .text-left {
+               	text-align:left
+                 }
+                .text-right {
+	        text-align:right
+                }
+               .text-center {
+	        text-align:center
+                }            
+

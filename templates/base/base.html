@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+
+    <title> {% block title %} {% endblock %}</title>
+    {%- block metas %}
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {%- endblock metas %}
+    
+     {%- block styles %}
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.ico') }}">
+     {%- endblock styles %}
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand"  href="#">CambaSoft</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->      
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+     
+         <li><a href="{{ url_for('reviews') }}">Comentarios</a></li>
+
+        <li><a href="{{ url_for('comment') }}">add Comentario</a></li> 
+        <li><a href="{{ url_for('users') }}">Usuario</a></li> 
+        <li><a href="{{ url_for('create') }}">Registrarse</a></li>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+       
+        <li><a href="{{ url_for('logout') }}">Cerrar</a></li>
+       
+    
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</header>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+        {% endif %}
+    {% endwith%}
+
+    {% block content %} 
+    {% endblock %}
+        
+    <footer>
+        <div class="container">
+            <div class="row">
+                  <p class="copyright text-muted small">Copyright &copy; 2018. All Rights Reserved CAMBASOFT</p>
+            </div>
+        </div>
+    </footer>
+    {% block scripts %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+     {%- endblock scripts %}
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+{% extends 'base/base.html'%}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/utils.html" as utils %}
+{% block title %} Comentarios  {% endblock %}
+{% block content %}
+    
+
+
+   <div class="container">
+        {% if comments %}
+           
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                     <h1>LISTA DE COMENTARIOS</h1>  
+                <table class="table  table-bordered table-hover">
+               <thead>
+                    <tr>
+                    
+                       <th scope="col">Usuario</th>
+                       <th scope="col">Fecha</th>
+                       <th scope="col">Comentario</th>
+                    </tr>
+                     </thead>
+                  <tbody>
+                       {% for comment in comments.items %}
+                        <tr>
+                          
+                          <td>{{ comment.username }}</td>
+                          <td>{{ date_format(comment.created_date) }}</td>
+                          <td>{{ comment.text }}</td>
+                        </tr>
+                          {% endfor %}    
+                    </tbody>
+                    </table>
+                    </div>
+                </div>
+
+
+
+  
+          
+        {% endif %}
+    </div>
+    
+
+
+
+{% endblock %}
